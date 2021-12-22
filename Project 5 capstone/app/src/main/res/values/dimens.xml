@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_padding">8dp</dimen>
+    <dimen name="largemargin">16dp</dimen>
+    <dimen name="smallmargin">4dp</dimen>
+    <dimen name="buttontextsize">16sp</dimen>
+    <dimen name="titletextsize">20sp</dimen>
+
+</resources>

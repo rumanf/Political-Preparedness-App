@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="election"
+            type="com.example.android.politicalpreparedness.network.models.Election"/>
+        <variable
+            name="electionclicked"
+            type="com.example.android.politicalpreparedness.election.adapter.ElectionListener" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:onClick="@{() -> electionclicked.onClick(election)}">
+
+        <TextView
+            android:id="@+id/electionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/default_padding"
+            android:layout_marginTop="@dimen/default_padding"
+            android:text="@{election.name}"
+            android:textSize="@dimen/titletextsize" />
+
+        <TextView
+            android:id="@+id/electionDate"
+            style="@style/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/default_padding"
+            android:text="@{election.electionDay.toString()}"
+            />
+    </LinearLayout>
+
+
+</layout>

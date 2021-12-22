@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="rep"
+            type="com.example.android.politicalpreparedness.representative.model.Representative" />
+
+        <variable
+            name="repclicked"
+            type="com.example.android.politicalpreparedness.representative.adapter.RepresentativeListAdapter"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/repPic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginVertical="@dimen/largemargin"
+            android:layout_marginEnd="10dp"
+            android:scaleType="centerCrop"
+            app:profileImage="@{rep.official.photoUrl}"
+            app:srcCompat="@drawable/ic_profile" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginVertical="@dimen/largemargin"
+            android:layout_weight=".7"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{rep.official.name}"
+                android:textAppearance="@style/headerstyle"
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/desc_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{rep.office.name}"
+                android:textAppearance="@style/text"
+                tools:text="Description" />
+
+            <TextView
+                android:id="@+id/party_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{rep.official.party}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                tools:text="Party" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginVertical="@dimen/largemargin"
+            android:layout_weight="1"
+            android:gravity="bottom|end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/wwwIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:padding="@dimen/default_padding"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_www" />
+
+            <ImageView
+                android:id="@+id/facebookIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|end"
+                android:padding="@dimen/default_padding"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_facebook" />
+
+            <ImageView
+                android:id="@+id/twitterIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|end"
+                android:padding="@dimen/default_padding"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_twitter" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
